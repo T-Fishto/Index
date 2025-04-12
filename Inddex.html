@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MànHinhDN</title>
+    <style>
+        body{
+            margin: 0;
+            background-image: url(https://maytinhvui.com/wp-content/uploads/2021/02/Hinh-nen-anime-1-min.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            margin: 100px;
+
+        }
+        .ThanhCongCu{
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: aqua;
+            z-index: 10;
+        }
+        .ManHinh{
+            position: absolute;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            width: 50vh;
+            height: 300px;
+            background-color: rgba(79, 67, 122, 0.5);
+            top: 25%;
+            right: 35%;
+            
+            
+        }
+        .ManHinh::before{
+            content: "Màn Hình Đăng Nhập";
+            display: block;
+            width: 200px;
+            height: 30px;
+            background-color: azure;
+            margin-left: 50px;
+            text-align: center;
+            color:rgb(235, 6, 25);
+            font-size: 18px;
+            border-radius: 15px;
+            margin-top: 20px;
+            transition: tranform  3s ease;
+
+        }
+        .ManHinh:hover{
+            transform: scale(1.25);
+        }
+        input::placeholder{
+            color: rgb(86, 86, 239);
+            margin-left: 50px;
+        }
+        #input1{
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding: 5px;
+
+        }
+        #input2{
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding: 5px;
+
+        } 
+        input{
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding: 5px;
+        }
+        #Nut1{
+            height: 30px;
+            margin-top: 15px; 
+            background-color: red;
+            margin-left: 16%;
+            width: 100px;
+            font-size: 15px;
+            color: azure;
+            cursor: pointer;
+        }
+        #Nut2{
+            height: 30px;
+            margin-top: 15px; 
+            background-color: red;
+            margin-left: 10px;
+            width: 100px;
+            font-size: 15px;
+            color: azure;
+            cursor: pointer;
+        }
+        dialog::backdrop{
+            background-color: rgba(60, 56, 62, 0.5);
+        }
+        #NutHopThoai{
+            background-color: rgb(249, 247, 247);
+            width: 30px;
+            height: 20px;
+            margin-top: 15px;
+            margin-left: 20px;
+            cursor: pointer;
+
+        }
+        li::marker{
+            color: rgb(113, 232, 27);
+        }
+    </style>
+</head>
+<body>
+    <div class="ThanhCongCu">
+        <button  id="NutHopThoai" onclick="document.getElementById('HopThoai').showModal()"> Mở</button>
+           <div>
+               <dialog id="HopThoai">
+                <p>Nhưng Trang web Đơn giản</p>
+                    <ul>
+                        <li>Đăng Nhập Cơ bản</li>
+                        <li>Vẽ Cơ bản</li>
+                        <li>Lập trình Cơ bản</li>
+                    </ul>
+                    <button onclick="document.getElementById('HopThoai').close()">Đóng</button>
+               </dialog>
+           </div>
+        
+        
+    </div>
+    <div class="ManHinh">
+    <input id="input1" type="text" placeholder="Nhập Tên">
+    <input id="input2" type="email" placeholder="Nhập email">
+    <input type="date" placeholder="Nhập Ngày">
+    
+    <button id="Nut1">Đăng Nhập</button>
+    <button id="Nut2">Đăng Kí</button>
+
+    </div>
+    
+</body>
+</html>
